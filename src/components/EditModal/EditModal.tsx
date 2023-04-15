@@ -132,6 +132,7 @@ export const EditModal: React.FC<ChildComponentProps> = (props) => {
 							style={{ margin: '0', width: '100%' }}
 							value={customer}
 							onChange={(e) => handleCustomerChange(e)}
+							onClick={(e) => e.stopPropagation()}
 						/>
 						<FormControl sx={{ m: 0, minWidth: 150 }} size='small'>
 							<InputLabel
@@ -163,6 +164,7 @@ export const EditModal: React.FC<ChildComponentProps> = (props) => {
 							style={{ margin: '0', width: '100%' }}
 							value={agent}
 							onChange={(e) => handleAgentChange(e)}
+							onClick={(e) => e.stopPropagation()}
 						/>
 						<Button
 							variant='contained'
