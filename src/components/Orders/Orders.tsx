@@ -123,15 +123,42 @@ function Orders() {
 
 	// Headers, fields, and field size data.
 	const columns: GridColDef[] = [
-		{ field: 'orderId', headerName: 'Order ID', width: 300 },
-		{ field: 'createdDate', headerName: 'Creation Date', width: 180 },
-		{ field: 'createdByUserName', headerName: 'Created By', width: 150 },
-		{ field: 'orderType', headerName: 'Order Type', width: 130 },
-		{ field: 'customerName', headerName: 'Customer', width: 150 },
+		{
+			field: 'orderId',
+			headerName: 'Order ID',
+			disableColumnMenu: true,
+			width: 300,
+		},
+		{
+			field: 'createdDate',
+			headerName: 'Creation Date',
+			disableColumnMenu: true,
+			width: 180,
+		},
+		{
+			field: 'createdByUserName',
+			headerName: 'Created By',
+			disableColumnMenu: true,
+			width: 150,
+		},
+		{
+			field: 'orderType',
+			headerName: 'Order Type',
+			disableColumnMenu: true,
+			width: 130,
+		},
+		{
+			field: 'customerName',
+			headerName: 'Customer',
+			disableColumnMenu: true,
+			width: 150,
+		},
 		{
 			field: 'edit',
 			headerName: '',
 			width: 50,
+			sortable: false,
+			disableColumnMenu: true,
 			renderCell: (params) => (
 				<EditNote
 					style={{ color: '#444444' }}
